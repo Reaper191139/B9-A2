@@ -1,11 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800;900;1000&display=swap");
 
+/*shared styles*/
+
 * {
   font-family: "Mulish", sans-serif;
 }
+section {
+  width: 1170px;
+  margin: auto;
+  margin-bottom: 48px;
+}
+.description {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  color: #5a5a5d;
+  margin: 0%;
+}
 /* navbar*/
 .logo {
-  width: 48px;
   height: 56.008px;
 }
 .name {
@@ -32,10 +45,11 @@ nav a {
 }
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 260px;
   align-items: center;
-  margin-right: 135px;
-  margin-left: 127px;
+  margin: auto;
+  width: 1170px;
 }
 nav ul {
   display: flex;
@@ -58,10 +72,8 @@ nav img {
     ),
     url("../images/Group\ 13\ \(1\)\ \(1\).png");
   background-repeat: no-repeat;
-  width: 1170px;
   height: 500px;
   margin: auto;
-  margin-top: 49px;
   border-radius: 16px;
 }
 .banner-name {
@@ -134,6 +146,21 @@ nav img {
   line-height: normal;
   border: none;
 }
+.btn-orange-1 {
+  width: 174px;
+  height: 52px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #ff5400;
+  color: #fff;
+  text-align: center;
+  font-family: Mulish;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border: none;
+}
 /*popular-tours section*/
 .popular-tours {
   display: flex;
@@ -141,8 +168,6 @@ nav img {
   align-items: center;
   gap: 53px;
   background-color: #ffffff;
-  margin-left: 250px;
-  margin-right: 135px;
 }
 .pop-title {
   color: #131318;
@@ -161,13 +186,12 @@ nav img {
   font-style: normal;
   font-weight: 400;
   line-height: 26px; /* 162.5% */
+  padding-bottom: 32px;
 }
 .mountain {
-  padding-top: 130px;
+  padding-top: 100px;
   width: 540px;
   height: 550px;
-  flex-shrink: 0;
-  margin-right: 120px;
 }
 /*section two-choose the destination*/
 .choose {
@@ -189,14 +213,14 @@ nav img {
   font-style: normal;
   font-weight: 400;
   line-height: 26px; /* 162.5% */
-  margin-top: 0px;
 }
+
 .locations > div {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 24px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 .container {
   position: relative;
@@ -213,4 +237,245 @@ nav img {
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.benefits > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin: auto;
+  margin-bottom: 24px;
+  width: 1170px;
+}
+.container-1 {
+  width: 573px;
+  height: 284px;
+  border-radius: 16px;
+  border: 1px solid rgba(251, 181, 99, 0.2);
+  background: rgba(251, 181, 99, 0.05);
+}
+.container-2 {
+  width: 573px;
+  height: 284px;
+  border-radius: 16px;
+  border: 1px solid rgba(41, 206, 246, 0.2);
+  background: rgba(41, 206, 246, 0.05);
+}
+.container-3 {
+  width: 573px;
+  height: 284px;
+  border-radius: 16px;
+  border: 1px solid rgba(233, 68, 68, 0.2);
+  background: rgba(233, 68, 68, 0.05);
+}
+.benefits > div > div {
+  padding: 32px;
+}
+.benefits-title {
+  color: #131318;
+  font-family: Mulish;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+.benefits-description {
+  width: 486px;
+  color: #5a5a5d;
+  font-family: Mulish;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+}
+/*some tour offers section*/
+
+.deal-11 {
+  position: relative;
+}
+.deal-1-background {
+  margin: auto;
+  width: 1170px;
+}
+.deal-1-whole {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-56px, -170px);
+  width: 579px;
+  height: 389px;
+  border-radius: 16px;
+  border: 2px solid #fff;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(2.5px);
+}
+.deal-specs {
+  display: flex;
+  gap: 24px;
+}
+.deal-details {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.deal-logo {
+  width: 24px;
+  height: 24px;
+}
+.deal-title {
+  color: #131318;
+  font-family: Mulish;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+.deal-description {
+  color: #5a5a5d;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+}
+.deal-price {
+  color: #ff5400;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+.deal-title,
+.deal-price,
+.deal-specs,
+.deal-description,
+.btn-orange-1 {
+  margin-left: 50px;
+  margin-right: 77px;
+}
+.deal-specs {
+  padding-top: 30px;
+  padding-bottom: 0px;
+}
+.deal-2-whole {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-525px, -170px);
+  width: 579px;
+  height: 389px;
+  border-radius: 16px;
+  border: 2px solid #fff;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(2.5px);
+}
+#see-all-packages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*video of mountains of bangladesh*/
+.mountain-video {
+  margin-top: 100px;
+  border-radius: 16px;
+  background: linear-gradient(
+    180deg,
+    #131318 -31.96%,
+    rgba(19, 19, 24, 0) 100%
+  );
+}
+.pop-title-2 {
+  color: #131318;
+  text-align: left;
+  font-family: Mulish;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+/*newsletter section*/
+.newsletter {
+  border-radius: 16px;
+  border: 1px solid #ff5400;
+  height: 422px;
+}
+form input {
+  display: block;
+  width: 360px;
+  height: 52px;
+  margin-bottom: 16px;
+  margin-left: 40px;
+  margin-right: 40px;
+  padding-left: 20px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(19, 19, 24, 0.05);
+}
+.hr1 {
+  width: 380px;
+  height: 1px;
+  margin: auto;
+  margin-top: 0%;
+  margin-bottom: 24px;
+}
+#newsletter-text {
+  color: #131318;
+  font-family: Mulish;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  padding-left: 40px;
+  padding-top: 40px;
+  padding-bottom: 16px;
+  margin: 0px;
+}
+.newsletter-description {
+  color: #5a5a5d;
+  font-family: Mulish;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+  padding-left: 40px;
+  width: 350px;
+  margin: 0px;
+  padding-bottom: 24px;
+}
+.newsletter-offer-section {
+  display: flex;
+  justify-content: space-between;
+}
+.lastimg {
+  height: 422px;
+}
+.newsletter button {
+  margin-left: 40px;
+}
+.offer-sticker {
+  width: 324px;
+  height: 120px;
+  transform: rotate(-19.628deg) translate(380px, -50px);
+  border-radius: 16px;
+  background: #ff5400;
+}
+.offer-sticker h1 {
+  color: #fff;
+  text-align: center;
+  font-family: Mulish;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-top: 20px;
+  margin: 0%;
+}
+.offer-sticker h3 {
+  color: #fff;
+  font-family: Mulish;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-align: center;
+  margin: 0%;
 }
