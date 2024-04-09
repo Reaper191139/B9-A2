@@ -479,3 +479,27 @@ form input {
   text-align: center;
   margin: 0%;
 }
+/*footer section*/
+footer {
+  background: rgba(19, 19, 24, 0.05);
+  text-align: center;
+}
+footer > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 0%;
+}
+footer > p,
+footer > h6 {
+  padding-bottom: 48px;
+}
+#social {
+  margin-bottom: 20px;
+}
+footer > hr {
+  width: 872px;
+  background: rgba(19, 19, 24, 0.1);
+  margin-bottom: 48px;
+}
