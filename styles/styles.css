@@ -1,23 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800;900;1000&display=swap");
 
 /*shared styles*/
-
-* {
-  font-family: "Mulish", sans-serif;
-}
-section {
-  width: 1170px;
-  margin: auto;
+section{
   margin-bottom: 48px;
 }
-.description {
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  color: #5a5a5d;
-  margin: 0%;
+
+body {
+  font-family: "Mulish", sans-serif;
+  padding: 0 10px;
 }
+
 /* navbar*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  max-width: 1170px;
+}
 .logo {
   height: 56.008px;
 }
@@ -43,14 +43,6 @@ nav a {
 .home {
   color: #ff5400;
 }
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 260px;
-  align-items: center;
-  margin: auto;
-  width: 1170px;
-}
 nav ul {
   display: flex;
   align-items: center;
@@ -63,6 +55,27 @@ nav ul {
 nav img {
   margin-right: 16px;
 }
+@media screen and (max-width: 1200px) {
+  nav {
+    padding: 0 1rem;
+  }
+  nav ul {
+    display: none;
+  }
+  .logo {
+    height: 20px;
+  }
+  .name {
+    color: #131318;
+    font-size: 20px;
+    font-weight: 800;
+  }
+}
+@media screen and (min-width: 1201px) {
+  .burger {
+    display: none;
+  }
+}
 /*banner*/
 .banner {
   background-image: linear-gradient(
@@ -72,23 +85,25 @@ nav img {
     ),
     url("../images/Group\ 13\ \(1\)\ \(1\).png");
   background-repeat: no-repeat;
-  height: 500px;
+  background-size: cover;
+  background-position: 50%;
   margin: auto;
   border-radius: 16px;
+  padding: 120px 50px;
+  max-width: 1170px;
 }
 .banner-name {
   text-align: center;
-  padding-top: 106px;
   padding-bottom: none;
   color: #fff;
   font-family: Mulish;
-  font-size: 64px;
+  font-size: 3rem;
   font-style: normal;
   font-weight: 800;
   line-height: normal;
 }
 .banner-description {
-  width: 676px;
+  max-width: 676px;
   color: #fff;
   text-align: center;
   margin: auto;
@@ -100,26 +115,28 @@ nav img {
   font-weight: 400;
   line-height: 26px;
 }
-.select {
+.select-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+}
+.select {
+  display: flex;
   border-radius: 8px;
   gap: 24px;
-  width: 800px;
-  height: 84px;
   background: rgba(255, 255, 255, 0.3);
   margin: auto;
-  padding-right: 12px;
-  padding-left: 12px;
+  padding: 12px;
+  width: 100%;
+}
+
+.select > * {
+  flex: 1;
 }
 
 #when,
 #select-type,
 .where {
-  width: 174px;
   height: 52px;
-  flex-shrink: 0;
   border-radius: 8px;
   background: #fff;
   border: none;
@@ -132,9 +149,8 @@ nav img {
   line-height: normal;
 }
 .btn-orange {
-  width: 174px;
+  padding: 0px 2rem;
   height: 52px;
-  flex-shrink: 0;
   border-radius: 8px;
   background: #ff5400;
   color: #fff;
@@ -160,6 +176,19 @@ nav img {
   font-weight: 700;
   line-height: normal;
   border: none;
+}
+@media screen and (max-width: 840px) {
+  .select {
+    flex-direction: column;
+  }
+
+  .banner {
+    padding: 30px;
+  }
+
+  .select > * {
+    flex: auto;
+  }
 }
 /*popular-tours section*/
 .popular-tours {
