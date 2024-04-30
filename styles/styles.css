@@ -1,13 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800;900;1000&display=swap");
 
+* {
+  box-sizing: border-box;
+}
 /*shared styles*/
-section{
+section {
+  margin: auto;
+  max-width: 1170px;
   margin-bottom: 48px;
 }
 
 body {
   font-family: "Mulish", sans-serif;
-  padding: 0 10px;
+  padding: 0 12px;
 }
 
 /* navbar*/
@@ -17,6 +22,7 @@ nav {
   align-items: center;
   margin: auto;
   max-width: 1170px;
+  padding: 32px 0px;
 }
 .logo {
   height: 56.008px;
@@ -57,7 +63,7 @@ nav img {
 }
 @media screen and (max-width: 1200px) {
   nav {
-    padding: 0 1rem;
+    padding: 16px 16px;
   }
   nav ul {
     display: none;
@@ -219,8 +225,19 @@ nav img {
 }
 .mountain {
   padding-top: 100px;
-  width: 540px;
-  height: 550px;
+  max-width: 540px;
+  max-height: 550px;
+}
+@media screen and (max-width: 840px) {
+  .popular-tours {
+    flex-direction: column;
+  }
+  .mountain {
+    max-width: none;
+    max-height: none;
+    width: 100%;
+    padding: 0%;
+  }
 }
 /*section two-choose the destination*/
 .choose {
@@ -254,7 +271,7 @@ nav img {
 .container {
   position: relative;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
   font-family: Mulish;
   font-size: 20px;
   font-style: normal;
@@ -267,6 +284,16 @@ nav img {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+@media screen and (max-width: 840px) {
+  .locations div {
+    flex-direction: column;
+  }
+  .container,
+  .container > img {
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+}
 .benefits > div {
   display: flex;
   justify-content: center;
@@ -274,7 +301,7 @@ nav img {
   gap: 24px;
   margin: auto;
   margin-bottom: 24px;
-  width: 1170px;
+  max-width: 1170px;
 }
 .container-1 {
   width: 573px;
@@ -317,91 +344,136 @@ nav img {
   font-weight: 400;
   line-height: 26px; /* 162.5% */
 }
+@media screen and (max-width: 840px) {
+  .benefits > div {
+    flex-direction: column;
+  }
+}
 /*some tour offers section*/
 
-.deal-11 {
-  position: relative;
-}
-.deal-1-background {
-  margin: auto;
-  width: 1170px;
-}
-.deal-1-whole {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-56px, -170px);
-  width: 579px;
-  height: 389px;
+.poo {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
   border-radius: 16px;
-  border: 2px solid #fff;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(2.5px);
-}
-.deal-specs {
+  padding: 64px;
   display: flex;
+  max-width: 1170px;
+}
+
+.poo-details {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 60%;
+  padding: 32px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
   gap: 24px;
 }
-.deal-details {
+
+.poo-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.poo-specs > div {
   display: flex;
   align-items: center;
-  gap: 8px;
-}
-.deal-logo {
-  width: 24px;
-  height: 24px;
-}
-.deal-title {
-  color: #131318;
-  font-family: Mulish;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: normal;
-}
-.deal-description {
+  gap: 4px;
   color: #5a5a5d;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.poo-description > h1 {
+  margin-bottom: 18px;
+  color: #131318;
+  font-size: 24px;
+  font-weight: 800;
+}
+.poo-description > p {
+  color: #5a5a5d;
+  font-family: Mulish;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 26px; /* 162.5% */
 }
-.deal-price {
+
+.poo-price {
   color: #ff5400;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: normal;
 }
-.deal-title,
-.deal-price,
-.deal-specs,
-.deal-description,
-.btn-orange-1 {
-  margin-left: 50px;
-  margin-right: 77px;
+
+.btn {
+  padding: 12px 32px;
+  background-color: #ff5400;
+  color: #fff;
+  border-radius: 8px;
+  border: none;
 }
-.deal-specs {
-  padding-top: 30px;
-  padding-bottom: 0px;
+
+.poo-deal-1 {
+  background-image: url("../images/Group 39.png");
+  justify-content: end;
 }
-.deal-2-whole {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-525px, -170px);
-  width: 579px;
-  height: 389px;
-  border-radius: 16px;
-  border: 2px solid #fff;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(2.5px);
+
+.poo-deal-2 {
+  background-image: url("../images/Group 40.png");
+  justify-content: start;
 }
+
+.poo-deal-3 {
+  background-image: url("../images/Group 39.png");
+  justify-content: end;
+}
+
+@media screen and (max-width: 840px) {
+  .poo,
+  .poo-details {
+    padding: 24px;
+  }
+  .poo-details {
+    width: 100%;
+    margin-top: 80px;
+  }
+}
+
 #see-all-packages {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.mouse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 15rem;
+}
+.surprise {
+display: none;
+}
+.surprise h3 {
+  color: #ff5400;
+  text-align: center;
+  font-family: Mulish;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+.mouse:hover + .surprise {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 15rem;
+  background-color: rgb(247, 225, 225);
+  border-radius: 16px;
+  transition: all 3s ease-out;
+}
+
 /*video of mountains of bangladesh*/
 .mountain-video {
   margin-top: 100px;
@@ -472,20 +544,30 @@ form input {
 }
 .newsletter-offer-section {
   display: flex;
-  justify-content: space-between;
+  gap: 24px;
 }
 .lastimg {
+  flex: 1;
+  position: relative;
+}
+.lastimg > img {
+  width: 100%;
   height: 422px;
+  object-fit: cover;
+  border-radius: 16px;
 }
 .newsletter button {
   margin-left: 40px;
 }
 .offer-sticker {
+  position: absolute;
   width: 324px;
   height: 120px;
-  transform: rotate(-19.628deg) translate(380px, -50px);
+  transform: rotate(-19.628deg);
   border-radius: 16px;
   background: #ff5400;
+  bottom: 56px;
+  right: 56px;
 }
 .offer-sticker h1 {
   color: #fff;
@@ -508,6 +590,11 @@ form input {
   text-align: center;
   margin: 0%;
 }
+@media screen and (max-width: 840px) {
+  .newsletter-offer-section {
+    flex-direction: column;
+  }
+}
 /*footer section*/
 footer {
   background: rgba(19, 19, 24, 0.05);
@@ -521,14 +608,16 @@ footer > div {
   margin: 0%;
 }
 footer > p,
-footer > h6 {
+footer > h6,
+footer > h3 {
   padding-bottom: 48px;
 }
 #social {
   margin-bottom: 20px;
 }
 footer > hr {
-  width: 872px;
+  margin: auto;
+  max-width: 872px;
   background: rgba(19, 19, 24, 0.1);
   margin-bottom: 48px;
 }
